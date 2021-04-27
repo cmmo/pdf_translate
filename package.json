@@ -9,10 +9,14 @@
   },
   "dependencies": {
     "core-js": "^3.6.5",
+    "firebase": "^8.3.1",
     "vue": "^2.6.11",
+    "vue-google-oauth2": "^1.5.8",
+    "vuefire": "^2.2.5",
     "vuetify": "^2.4.0"
   },
   "devDependencies": {
+    "@babel/plugin-bugfix-v8-spread-parameters-in-optional-chaining": "^7.13.12",
     "@vue/cli-plugin-babel": "~4.5.0",
     "@vue/cli-plugin-eslint": "~4.5.0",
     "@vue/cli-service": "~4.5.0",
