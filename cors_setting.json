@@ -1,0 +1,8 @@
+[
+    {
+      "origin": ["https://vue-fire-todo-7a72f.uc.r.appspot.com/"],
+      "responseHeader": ["Content-Type"],
+      "method": ["GET", "HEAD", "DELETE"],
+      "maxAgeSeconds": 3600
+    }
+]

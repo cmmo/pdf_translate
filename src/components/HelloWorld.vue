@@ -52,7 +52,7 @@ export default {
         .getDownloadURL()
         .then((url) => {
           var xhr = new XMLHttpRequest();
-          xhr.withCredentials = true; 
+          xhr.withCredentials = false; 
           xhr.responseType = "text";
           xhr.onload = () => {
             var text = xhr.response;
