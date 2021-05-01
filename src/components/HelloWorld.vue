@@ -2,8 +2,8 @@
   <v-container>
     <v-row class="text-center">
       <v-col class="mb-5" cols="6">
-        Powered by Google: Cloud Platform App Engine Cloud function Translation
-        API Cloud Storage API Source Repository Cloud Build
+        Powered by Google: Cloud Platform, App Engine, Cloud function,
+        Translation API, Cloud Storage API, Source Repository, Cloud Build
       </v-col>
     </v-row>
     <v-row class="text-center">
@@ -57,21 +57,21 @@ export default {
       let file_updatetime = timestamp - 1; // initial with past time
 
       while (file_updatetime < timestamp) {
-        if (file_updatetime < timestamp) {
+        await storage
+          .ref("afterTranslate.txt")
+          .getMetadata()
+          .then((metadata) => {
+            let date = new Date(metadata.updated);
+            file_updatetime = Math.round(date.getTime() / 1000);
+          })
+          .catch((error) => {
+            console.log(error);
+          });
+
+        // if (file_updatetime < timestamp) {
           await new Promise((resolve) => setTimeout(resolve, 1000)); // 1秒待つ
           console.log("Wait 1 second");
-        } else {
-          await storage
-            .ref("afterTranslate.txt")
-            .getMetadata()
-            .then((metadata) => {
-              let date = new Date(metadata.updated);
-              file_updatetime = Math.round(date.getTime() / 1000);
-            })
-            .catch((error) => {
-              console.log(error);
-            });
-        }
+        // }
       }
 
       console.log("New file translated");
