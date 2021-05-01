@@ -70,14 +70,14 @@ export default {
 
         // if (file_updatetime < timestamp) {
           await new Promise((resolve) => setTimeout(resolve, 1000)); // 1秒待つ
-          console.log("Wait 1 second");
+          console.log("Wait 1 second, timestamp=%d", file_updatetime);
         // }
       }
 
       console.log("New file translated");
       //check time end
 
-      storage
+      await storage
         .ref("afterTranslate.txt")
         .getDownloadURL()
         .then((url) => {
