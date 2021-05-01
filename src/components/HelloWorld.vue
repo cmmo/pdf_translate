@@ -32,7 +32,7 @@ export default {
 
   data: () => ({
     file: null,
-    text: null,
+    text: "Please wait a few seconds",
     imageUrl: null,
   }),
 
@@ -79,9 +79,9 @@ export default {
           xhr.withCredentials = false;
           xhr.responseType = "text";
           xhr.onload = () => {
-            var text = xhr.response;
-            console.log(text);
-            this.text = text
+            let translatedText = xhr.response;
+            console.log(translatedText);
+            this.text = translatedText
           };
           xhr.open("GET", url);
           xhr.send();
