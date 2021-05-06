@@ -1,5 +1,5 @@
 {
-  "name": "vue-fire-todo",
+  "name": "pdf-translate",
   "version": "0.1.0",
   "private": true,
   "scripts": {
@@ -48,6 +48,6 @@
     "last 2 versions",
     "not dead"
   ],
-  "_id": "vue-fire-todo@0.1.0",
+  "_id": "pdf-translate@0.1.0",
   "readme": "ERROR: No README data found!"
 }
