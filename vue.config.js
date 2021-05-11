@@ -6,5 +6,6 @@ module.exports = {
     config.performance
       .maxEntrypointSize(700000)
       .maxAssetSize(400000)
-  }
+  },
+  runtimeCompiler: true,
 }

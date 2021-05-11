@@ -2,8 +2,13 @@
   <v-container>
     <v-row class="text-center">
       <v-col class="mb-5" cols="6">
-        Powered by Google: Cloud Platform, App Engine, Cloud function,
-        Translation API, Cloud Storage API, Source Repository, Cloud Build
+        Powered by Google: Cloud Platform, App Engine, Firebase, Cloud function,
+        Translation API, Cloud Storage API, Source Repository, Cloud Build 
+      </v-col>
+    </v-row>
+    <v-row class="text-center">
+      <v-col class="mb-5" cols="6">
+        Powered by Vue & Vuetify
       </v-col>
     </v-row>
     <v-row class="text-center">

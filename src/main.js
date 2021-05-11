@@ -1,19 +1,30 @@
-import Vue from 'vue'
-import App from './App.vue'
+
+import Vue from "vue";
+import App from "@/App.vue";
 import vuetify from './plugins/vuetify';
-import {firestorePlugin} from 'vuefire'
-
-// import GAuth from 'vue-google-oauth2'
-// const gauthOption = {
-//   clientId: '667393057319-lurpsvl0ht2kps6cejnkjqttfd9vkk59.apps.googleusercontent.com',
-// }
-// Vue.use(GAuth, gauthOption)
-
-Vue.use(firestorePlugin);
+import router from "@/router/index";
+import firebase from 'firebase'
+import { config } from './helpers/firebaseConfig'
 
 Vue.config.productionTip = false
 
+/* eslint-disable no-new */
 new Vue({
-  vuetify,
-  render: h => h(App)
-}).$mount('#app')
+    vuetify,
+    el: '#app',
+    router,
+    components: { App },
+    template: '<App/>',
+    created() {
+        firebase.initializeApp(config);
+        firebase.auth().onAuthStateChanged((user) => {
+            if (user) {
+                console.log("success")
+                this.$router.push('/success')
+            } else {
+                console.log("auth")
+                // this.$router.push('/auth')
+            }
+        });
+    },
+})
