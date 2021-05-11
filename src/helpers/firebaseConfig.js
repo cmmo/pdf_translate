@@ -1,6 +1,6 @@
 export const config = {
     apiKey: "AIzaSyClW6RQaOn8x_5EaGWIiA7ykS0ks59_-WM",
-    authDomain: "vue-fire-todo-7a72f.firebaseapp.com",
+    authDomain: "vue-fire-todo-7a72f.firebaseapp.com,localhost,pdf.tigergp.com",
     projectId: "vue-fire-todo-7a72f",
     storageBucket: "vue-fire-todo-7a72f.appspot.com",
     messagingSenderId: "499968820054",
