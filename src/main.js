@@ -17,10 +17,11 @@ new Vue({
     template: '<App/>',
     created() {
         firebase.initializeApp(config);
+        console.log("firebase initialized")
         firebase.auth().onAuthStateChanged((user) => {
             if (user) {
                 console.log("success")
-                this.$router.push('/success')
+                // this.$router.push('/success')
             } else {
                 console.log("auth")
                 // this.$router.push('/auth')
