@@ -41,6 +41,7 @@ export default {
     logOut() {
       console.log("logout");
       firebase.auth().signOut();
+      this.$router.push('/auth')
     },
   },
 };
