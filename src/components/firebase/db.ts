@@ -7,7 +7,7 @@ import "firebase/storage";
 // Your web app's Firebase configuration
 // For Firebase JS SDK v7.20.0 and later, measurementId is optional
 const firebaseConfig = {
-    apiKey: "AIzaSyClW6RQaOn8x_5EaGWIiA7ykS0ks59_-WM",
+    apiKey: "AIzaSyClW6RQaOn8x_5EaGWIiA7ykS0ks59_-WM", //Protected by API key restrictions 
     authDomain: "vue-fire-todo-7a72f.firebaseapp.com",
     projectId: "vue-fire-todo-7a72f",
     storageBucket: "vue-fire-todo-7a72f.appspot.com",
